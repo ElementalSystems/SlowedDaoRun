@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curvy Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id=mybod onload="start()">
+  <script src="../../demo/public/js/dude.js"></script>
+  <script src="js/femtoAHS.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/dragspot.js"></script>
+  <script src="js/rendercurve.js"></script>
+  <script src="js/curveeditor.js"></script>
+  <script src="../../demo/public/js/sprite.js"></script>
+  <script src="js/spriteeditor.js"></script>  
+  <script src="js/index.js"></script>
+  <!-- row-wise flexbox hat has  details/summary in them -->
+  <div class='tools'>
+    <details>
+      <summary>JSON Model Config</summary>
+      <div>
+        <textarea id=jsontext cols=40 rows=20></textarea>
+      </div>
+      <div>
+        <button onclick="pasteJson()">Paste</button>
+        <button onclick="copyJson()">Copy</button>
+      </div>
+    </details>
+    <details open>
+      <summary>Curve Editor</summary>
+      <div id=edittarget>
+        <svg viewBox="-100 -100 200 200" id=drawtarget>
+          <path id=marker d="M -70 70 L 70 70 M 0 -70 L 0 70 M -20 60 L -20 80 M -40 60 L -40 80 M -60 60 L -60 80 M 20 60 L 20 80 M 40 60 L 40 80 M 60 60 L 60 80"></path>
+          <g id=basepath></g>
+          
+        </svg>
+      </div>
+    </details>    
+    <details open>
+      <summary>Render View</summary>
+      <div id=renderframe>
+        <svg viewBox="-50 -100 300 200" id=rendertarget>
+          <g id=baserender />
+        </svg>
+      </div>
+    </details>    
+
+  </div>
+  <svg>
+    <defs>
+    <filter id='roughpaper'>
+       <!--<feTurbulence type="turbulence" baseFrequency='0.04' numOctaves="1" result="noise"/>
+        <feBlend in='SourceGraphic' in2="noise" result="noise2"/>     -->        
+        
+        <feDiffuseLighting  in='sourceAlpha' lighting-color='#DDD' surfaceScale='-3' result="paper">
+          <feDistantLight azimuth='45' elevation='60' />
+        </feDiffuseLighting>
+        <feGaussianBlur in='SourceGraphic' stdDeviation="1" result="test" /> 
+        <feBlend in='test' in2="paper" mode="darken"/>
+    </filter>
+
+    <pattern id="brick" viewBox="0,0,30,30" width="25" height="25" patternUnits="userSpaceOnUse" >
+      <path d="M0,0 L30,30 M15,0 L30,15 M0,15 L15,30 M0,1 L15,1 M15,15 L30,15 M0,7 L7,7 M23,7 L30,7 M10,23 L23,23"></path>      
+      <rect width="30" height="30"/>
+      
+    </pattern>
+
+    <pattern id="canvas" viewBox="0,0,20,20" width="5" height="5" patternUnits="userSpaceOnUse">
+      <path d="M3,0 L3,20" stroke="#F003"></path>      
+      <path d="M0,3 L20,3" stroke="#FF03"></path>          
+      <path d="M13,0 L13,20" stroke="#F003"></path>    
+      <path d="M6,13 L20,13" stroke="#FF03"></path>                  
+
+    </pattern>
+    
+    </defs>
+  </svg>
+</body>
+
+</html>

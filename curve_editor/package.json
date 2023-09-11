@@ -1,0 +1,16 @@
+{
+  "name": "curvy_editor",
+  "version": "1.0.0",
+  "description": "Editor for SVG animated curves",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "femtojs": "^1.0.1",
+    "serve": "^13.0.2"
+  }
+}

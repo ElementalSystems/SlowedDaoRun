@@ -1,0 +1,321 @@
+#edittarget {
+  background: #FFF;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;  
+  overflow: hidden;
+  object-fit: fill;
+  font-family: monospace;  
+}
+
+#rendertarget {
+  width: 100%;
+  height: 100%;
+  filter: url(#roughpaper);
+}
+
+
+
+#basepath {
+  stroke: #F00;
+  stroke-width: 2;
+  fill: none;
+}
+
+
+#baserender {
+  stroke: #0008;
+  stroke-width: .5;
+  fill: none;
+}
+
+path.f {
+  fill: #0088;
+  stroke: #008D;  
+  stroke-width: .25;
+}
+
+path.Dx,path.Dxx {
+  fill: #550A;  
+  stroke: none;    
+}
+
+path.D {
+  fill: url(#board);
+  stroke: none;    
+}
+
+path.Fx  {
+  fill: url(#brick);
+  stroke: none;  
+}
+
+path.F, path.Fxxx {
+  fill: #550A;
+  stroke: none;  
+}
+
+path.Fxx {
+  fill: #5508;
+  stroke: none;  
+}
+
+path.g  {
+  fill: #0505;
+  stroke: none;  
+}
+
+path.gx {
+  fill: #0A08;
+  stroke: none;  
+}
+
+
+path.h {
+  fill: url(#board);
+  stroke: none;    
+}
+
+
+
+
+@keyframes flash {
+  from {fill: #0082;}
+  to {fill: #00B7;}
+}
+
+path.m {  
+  stroke: none;  
+  stroke-width: 0;
+  animation: flash .5s infinite; 
+}
+
+
+
+
+
+path.s {
+  stroke: #F88A;
+  stroke-width: 1;
+  
+}
+
+path.b {
+  stroke: #060F;
+  stroke-width: 2;
+  fill: #0A0A;  
+}
+
+path.t {
+  fill: #040D;  
+}
+
+path.tx {
+  fill: #080A;  
+}
+
+
+path.a {
+  fill: #420F;  
+
+}
+
+path.i {
+  stroke: none;
+  fill: #000C;  
+}
+
+path.j {
+  stroke: none;
+  fill: #804A;  
+}
+
+
+path.k {
+  stroke: none;
+  fill: #4809;  
+}
+
+path.K {
+  stroke: none;
+  fill: #236A;  
+}
+
+
+path.w {
+  stroke: #000A;
+  stroke-width: .5;
+  fill: #A88A;  
+}
+
+div.spot {
+  width: 1rem;
+  height:1rem;
+  background: #00F5;
+  border: 1px #00F solid;
+  border-radius: .5rem;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-.5rem,-.5rem);
+}
+
+path.stuff {
+  stroke: #000;
+  stroke-width: 4;
+  fill: none;
+}
+
+path.stuff.blue {
+  stroke: #00A;
+}
+
+div.tools {
+  display: flex;
+
+}
+
+div.tools details {
+  border: 1px solid #999;
+  max-width: 2em;
+  transition: max-width 1s;
+  overflow: hidden;
+}
+
+div.tools details[open] {
+  border: 1px solid #000;
+  max-width: 100%;
+}
+
+div.tools details summary {
+  background: #EEE;
+  padding: .5rem;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+  height: 50vh;
+}
+
+div.tools details[open] summary {
+  height: auto;
+  padding: .2rem;
+  writing-mode: horizontal-tb;
+}
+
+
+.slot {
+  position: absolute;
+  right: 10px;
+  width: 25vh;
+  height: 25%;
+  top: 2.5%;
+  border-radius: 1rem;
+  border: 5px #FFF3 solid;  
+  background: #FFF1;
+  
+}
+
+.slot.show {
+  border: 3px #55FF solid;  
+  background: #FFF5;  
+}
+
+.slot.chosen {
+  border: 5px #00FA solid;  
+  background: #00F5;  
+}
+
+
+#s2 {
+  top: 37.5%;
+}
+
+#s3 {
+  top: 72.5%;
+}
+
+svg.card {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  pointer-events: none;
+  display:none;
+}
+
+svg.card.act {
+  display: block;
+}
+
+#spd {
+  position:absolute;
+  top: 1vh;
+  left: 1vh;
+  width: 20vw;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #0505;
+  font-variant: small-caps;
+}
+
+#stl {
+  font-size: 2rem;
+  position:absolute;
+  top: 1vh;
+  left: 22vw;
+  width: 20vw;
+  text-align: center;
+  background-color: #0555;
+  font-variant: small-caps;
+}
+
+#brick {
+  stroke-width: 1;
+  stroke: #3338;
+  
+}
+
+#brick rect {
+  stroke: none;
+  fill:#3337;
+}
+
+#board {
+  stroke-width: 3;
+  stroke: #8408;  
+  fill:#8402;
+}
+
+#board rect {
+  stroke: none;
+  
+}
+
+#canvas {
+  stroke-width: 5;  
+  fill:none;
+}
+
+#menu {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: monospace;
+  font-variant: small-caps;
+  stroke: none;
+  fill: #000D;
+  cursor:pointer;
+}
+
+#menu #tit,#menu #com {
+  font-size: 3.5rem;
+  fill: #000F;
+}
+
+#menu #sub {
+  font-size: 1rem;
+  fill: #000A;  
+  stroke: #0006;
+  stroke-width: 1;
+}

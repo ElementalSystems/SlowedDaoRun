@@ -1,0 +1,220 @@
+#edittarget {
+  width:70vmin;
+  height:70vmin;
+  background: #BFB;
+  background-size: 100%;
+  position: relative;
+}
+
+#edittarget svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+#renderframe {
+  width:60vmin;
+  height:60vmin;
+  background: #FFC;
+  position: relative;
+}
+
+#renderframe svg {
+  width: 100%;
+  height: 100%;
+}
+
+#basepath {
+  stroke: #F00;
+  stroke-width: 2;
+  fill: none;
+}
+
+#marker {
+  stroke: #0008;
+  stroke-width: 2;
+  fill: none;
+}
+
+
+#baserender {
+  stroke: #0008;
+  stroke-width: .5;
+  fill: none;
+}
+
+path.f {
+  fill: #0088;
+  stroke: #008D;  
+  stroke-width: .25;
+}
+
+path.s {
+  stroke: #F88A;
+  stroke-width: 1;
+  
+}
+
+path.b {
+  stroke: #060F;
+  stroke-width: 1;
+  fill: #0A0A;  
+}
+
+path.a {
+  stroke: #600F;
+  stroke-width: 1;
+  fill: #A00A;  
+}
+
+
+
+path.w {
+  stroke: #000A;
+  stroke-width: .5;
+  fill: #A88A;  
+}
+
+div.spot {
+  width: .5rem;
+  height:.5rem;
+  background: #00F5;
+  border: 1px #00F solid;
+  border-radius: .5rem;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-.25rem,-.25rem);
+}
+
+path.stuff {
+  stroke: #000;
+  stroke-width: 4;
+  fill: none;
+}
+
+path.stuff.blue {
+  stroke: #00A;
+}
+
+div.tools {
+  display: flex;
+
+}
+
+div.tools details {
+  border: 1px solid #999;
+  max-width: 2em;
+  transition: max-width 1s;
+  overflow: hidden;
+}
+
+div.tools details[open] {
+  border: 1px solid #000;
+  max-width: 100%;
+}
+
+div.tools details summary {
+  background: #EEE;
+  padding: .5rem;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+  height: 50vh;
+}
+
+div.tools details[open] summary {
+  height: auto;
+  padding: .2rem;
+  writing-mode: horizontal-tb;
+}
+
+
+path.f {
+  fill: #0088;
+  stroke: #008D;  
+  stroke-width: .25;
+}
+
+path.d {
+  fill: #550F;
+  stroke: none;  
+  stroke-width: 2;
+}
+
+
+path.Fx  {
+  fill: url(#brick);
+  stroke: none;  
+}
+
+path.F, path.Fxx {
+  fill: #420D;
+  stroke: none;  
+}
+
+
+@keyframes flash {
+  from {fill: #0082;}
+  to {fill: #00B7;}
+}
+
+path.m {  
+  stroke: none;  
+  stroke-width: 0;
+  animation: flash .5s infinite; 
+}
+
+path.j {
+  stroke: none;
+  fill: #804A;  
+}
+
+
+path.k {
+  stroke: none;
+  fill: #4809;  
+}
+
+
+path.K {
+  stroke: none;
+  fill: #236A;  
+}
+
+path.s {
+  stroke: #F88A;
+  stroke-width: 1;
+  
+}
+
+path.b {
+  stroke: #060F;
+  stroke-width: 1;
+  fill: #0A0A;  
+}
+
+path.a {
+  stroke: #600F;
+  stroke-width: 1;
+  fill: #A00A;  
+}
+
+
+
+path.w {
+  stroke: #000A;
+  stroke-width: .5;
+  fill: #A88A;  
+}
+
+
+#brick {
+  stroke-width: 1;
+  stroke: #333A;
+  
+}
+
+#brick rect {
+  stroke: none;
+  fill:#3337;
+}
