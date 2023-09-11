@@ -218,3 +218,17 @@ path.w {
   stroke: none;
   fill:#3337;
 }
+
+path.t {
+  fill: #040D;  
+}
+
+path.tx {
+  fill: #080A;  
+}
+
+
+path.E  {
+  fill: url(#temple);
+  stroke: none;  
+}

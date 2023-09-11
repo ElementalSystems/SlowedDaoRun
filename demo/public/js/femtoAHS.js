@@ -67,7 +67,7 @@
 			addClass:    function(t) { iter(i => i.classList.add(t));                  return this },
 			addClasses:  function(l) { l?.split(' ').forEach(t=>{ iter(i => i.classList.toggle(t,true));  }); return this;},
 			emptyClass:  function() {iter(i => i.className=''); return this; },
-			toggleClass: function(t) { iter(i => i.classList.toggle(t));               return this },
+			toggleClass: function(t,v) { iter(i => i.classList.toggle(t,v));               return this },
 			removeClass: function(t) { iter(i => i.classList.remove(t));               return this },
 			empty:        function() { iter(i => i.innerHTML = '');                    return this },
 			attr:     function(k, v) { iter(i => i.setAttribute(k, v));                return this },			

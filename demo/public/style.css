@@ -1,3 +1,7 @@
+*,*:focus,*:hover{
+  outline:none;
+}
+
 #edittarget {
   background: #FFF;
   position: absolute;
@@ -14,21 +18,6 @@
   width: 100%;
   height: 100%;
   filter: url(#roughpaper);
-}
-
-
-
-#basepath {
-  stroke: #F00;
-  stroke-width: 2;
-  fill: none;
-}
-
-
-#baserender {
-  stroke: #0008;
-  stroke-width: .5;
-  fill: none;
 }
 
 path.f {
@@ -49,6 +38,11 @@ path.D {
 
 path.Fx  {
   fill: url(#brick);
+  stroke: none;  
+}
+
+path.E  {
+  fill: url(#temple);
   stroke: none;  
 }
 
@@ -78,9 +72,6 @@ path.h {
   stroke: none;    
 }
 
-
-
-
 @keyframes flash {
   from {fill: #0082;}
   to {fill: #00B7;}
@@ -92,19 +83,14 @@ path.m {
   animation: flash .5s infinite; 
 }
 
-
-
-
-
 path.s {
   stroke: #F88A;
-  stroke-width: 1;
-  
+  stroke-width: 1;  
 }
 
 path.b {
-  stroke: #060F;
-  stroke-width: 2;
+  stroke: #0608;
+  stroke-width: 1;
   fill: #0A0A;  
 }
 
@@ -145,75 +131,38 @@ path.K {
 
 
 path.w {
-  stroke: #000A;
+  stroke: none;
   stroke-width: .5;
-  fill: #A88A;  
+  fill: #A84A;  
 }
-
-div.spot {
-  width: 1rem;
-  height:1rem;
-  background: #00F5;
-  border: 1px #00F solid;
-  border-radius: .5rem;
-  position: absolute;
-  left:50%;
-  top:50%;
-  transform: translate(-.5rem,-.5rem);
-}
-
-path.stuff {
-  stroke: #000;
-  stroke-width: 4;
-  fill: none;
-}
-
-path.stuff.blue {
-  stroke: #00A;
-}
-
-div.tools {
-  display: flex;
-
-}
-
-div.tools details {
-  border: 1px solid #999;
-  max-width: 2em;
-  transition: max-width 1s;
-  overflow: hidden;
-}
-
-div.tools details[open] {
-  border: 1px solid #000;
-  max-width: 100%;
-}
-
-div.tools details summary {
-  background: #EEE;
-  padding: .5rem;
-  writing-mode: vertical-rl;
-  cursor: pointer;
-  height: 50vh;
-}
-
-div.tools details[open] summary {
-  height: auto;
-  padding: .2rem;
-  writing-mode: horizontal-tb;
-}
-
 
 .slot {
   position: absolute;
   right: 10px;
-  width: 25vh;
-  height: 25%;
-  top: 2.5%;
-  border-radius: 1rem;
-  border: 5px #FFF3 solid;  
-  background: #FFF1;
-  
+  width: 25vmin;
+  height: 25vmin;
+  top: 2.5vmin;
+  border-radius: 2vmin;
+  border: none;  
+  background: none;  
+}
+
+div.slot.slot.show span {
+  display:block;
+}
+
+div.slot span {
+  display:none;
+  position: absolute;
+  top: .25em;
+  left: .25em;
+  width:1.5em;
+  font-size: 3vmin;
+  text-align:center;
+  border: 1px solid #000;
+  border-radius: .5em;
+  padding: .25em 0em;
+  pointer-events: none;
 }
 
 .slot.show {
@@ -228,11 +177,11 @@ div.tools details[open] summary {
 
 
 #s2 {
-  top: 37.5%;
+  top: 37.5vmin;
 }
 
 #s3 {
-  top: 72.5%;
+  top: 72.5vmin;
 }
 
 svg.card {
@@ -251,23 +200,39 @@ svg.card.act {
 
 #spd {
   position:absolute;
-  top: 1vh;
-  left: 1vh;
-  width: 20vw;
-  font-size: 2rem;
+  right: 30vmin;
+  top: 2vmin;  
+  font-size: 5vmin;
   text-align: center;
-  background-color: #0505;
+  color: #050A;
   font-variant: small-caps;
 }
 
-#stl {
-  font-size: 2rem;
+#inst.show {
+  display:block;
+}
+
+#inst {
+  display:none;
   position:absolute;
-  top: 1vh;
-  left: 22vw;
-  width: 20vw;
+  right: 30vmin;
+  top: 0;  
+  height:100vmin;  
+  font-size: 4vmin;
   text-align: center;
-  background-color: #0555;
+  color: #005A;
+  font-variant: small-caps;
+  writing-mode: vertical-rl;
+}
+
+
+#stl {
+  font-size: 5vmin;
+  position:absolute;
+  top: 2vmin;
+  right: 45vmin;  
+  text-align: center;
+  color: #055A;
   font-variant: small-caps;
 }
 

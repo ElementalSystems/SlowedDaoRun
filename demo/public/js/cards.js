@@ -10,6 +10,7 @@ function makeController(al,callb)
     let ai=act[i];
     if ((ai==null)||hasChosen) return;
     $('.card').removeClass('act');
+    $('.slot').removeClass('show');
     cards[ai].addClass('act');
     $('#s'+i).addClass('chosen');    
 
@@ -19,6 +20,19 @@ function makeController(al,callb)
   }
   
   $('.card').remove();
+
+  //keyboard driver
+  let old=$('#s1').sel()[0];
+  old.replaceWith(old.cloneNode(true));
+  $('#s1').on('keydown',(e)=>{
+    switch (e.key) {
+      case 'ArrowUp': ctl(1); break;
+      case 'ArrowRight': ctl(2); break;
+      case 'ArrowDown': ctl(3); break;
+    }
+    console.log(e);
+  });
+
   
   //for each action make a card
   let cards=al.map((a,ai)=>{
@@ -47,6 +61,8 @@ function makeController(al,callb)
        chosenActionIndex=actI[0]; //choose default action at least
        hasChosen=0;
        act=actI;
+
+       $('#s1').sel()[0].focus();
        //Check all cards are off
        $('.card').removeClass('act').removeClass('chosen');
        var any=false;
@@ -59,7 +75,7 @@ function makeController(al,callb)
           cd.addClass('act');            
           any=true;
        });
-       //if ((!any)&&callb) callb();
+       $('#inst').toggleClass('show',any)
        return any;
     },
     get:()=>chosenActionIndex,

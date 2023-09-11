@@ -21,7 +21,7 @@ function makeSprite(conf,base,x=0,y=0,r=0,noAction=null)
     if (!conf.f.z) { //no zero frame
       conf.f.z=conf.f.b.map((v,i,a)=>a[i-(i%6)+i%2]); //make all points the first point
       if (!conf.a) conf.a={}; //create an animations space
-      conf.a.zb=[{ f: 'b', t:25 }]; //roll from frame to b is 100 treks      
+      conf.a.zb=[{ f: 'b', t:80 }]; //roll from frame to b is 100 treks      
     }
 
     let gbase=$('<g>').addClass('sprite');
@@ -138,6 +138,10 @@ function getRenderFunction(cls)
         case 'Fxx':  return createOffsetB(25,225,createCSR(0,200));        
         case 'Fxxx':  return createOffsetB(25,20,createCSR(5,-5));        
         case 'm':  return createCSR(-2,3);
+
+        //Temple World
+        case 'E':  return createCSR(25,25);        
+        
 
         //green world
         case 'g': return createVariantB(5,20,5,createCSR(25,25));
