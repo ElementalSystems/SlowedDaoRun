@@ -1,4 +1,4 @@
 
-var editSprite=td;
+var editSprite=dog;
 var initConfig=editSprite.f.b;
 

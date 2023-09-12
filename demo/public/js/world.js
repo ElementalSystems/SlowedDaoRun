@@ -1,13 +1,14 @@
 
 bits={
   l: { y:0, b:0 , s:sl }, //stone level
-  L: { y:0, b:0 , s:sl2 }, //stone level
+  L: { y:0, b:0 , s:sl2 }, //stone level 2
   T: { y:0, b:0 , s:pcT }, //stone tower
   u: { y:-1, b:0 , s:pcu }, //stone up
   d: { y:1, b:0 , s:sl }, //stone down
 
   h: { y:0, b:1 , s:hurdle }, //hurdle
   H: { y:0, b:1 , s:bhurdle }, //hurdle (flower)
+  k: { y:0, b:1 , s:hurdle2 }, //hurdle (fence)
   
 
   i: { y:0, b:1 , s:gl }, //green level with fake bump
@@ -18,6 +19,7 @@ bits={
   F: { y:0, b:0, s:bloom}, //flower
   t: { y:0, b:0, s:tree }, //pine tree
   c: { y:0, b:1, s:cow }, //cow problem
+  C: { y:0, b:1, s:dog }, //dog
 
   //temple
   s: {y:0, b:0, s:tl},  //t level
@@ -28,6 +30,18 @@ bits={
   B: {y:0, b:1, s:bud},//big buddha
   r: { y:-1, b:0 , s:tu }, //t up
   R: { y:1, b:0 , s:td }, //t down
+
+  //roof
+  x: {y:0, b:0, s:rl},
+  X: {y:0, b:0, s:rlc},
+  y: {y:-1, b:0, s:ru},
+  Y: {y:0, b:0, s:sl_low},
+  W: {y:0, b:0, s:sl_low},
+  z: {y:1, b:0, s:rd},
+  Z: {y:1, b:0, s:sl_down},
+
+  
+
 
 };
 

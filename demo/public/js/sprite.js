@@ -146,6 +146,9 @@ function getRenderFunction(cls)
         //green world
         case 'g': return createVariantB(5,20,5,createCSR(25,25));
         case 'gx': return createVariantB(10,20,10,createBSR(5,6,2));
+
+        //roofs
+        case 'r': return createCSR(5,8);        
         
 
 

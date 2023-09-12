@@ -1,7 +1,7 @@
 
 function start()
 {
-  //startWorld('ggHGUgggggHGgg');
+  //startWorld('llkLTLDDgggiCgg');
 }
 
 function startLev(l)
@@ -11,6 +11,6 @@ function startLev(l)
     case 0: $('#rendertarget').attr('viewBox',"-1200 -300 1200 300"); break;
     case 1: startWorld('ggFGHGFGGhGggggUGggiicGgtGUgtGHGDgDtGggiicGDgggiicGUUTGHGDtGtGHGFGDDTGtGTG');  break;
     case 2: startWorld('ggHGTGtGtGTGgghSsTSjjJBJsssTSTSmSssmSDsmSsmSDssmSsmSDmSsrrrTSmSjjJBJmSssRRRTSjjJBJmSTSRmSTSHSggtGtGtG');  break;
-    case 3: startWorld('llTluuuldllhlllludllludllulTlllhllllldlullllullhllddlllhlldduuu'); break;    
+    case 3: startWorld('llTLkLlYxyyXzzZllWXxyzxZDggFGHGgggiCgtGggHDYxXxxzZlTLlhLdllulluuTLlYxXyyXzzZllkLTLDDgggiCgglTLTL'); break;    
   }
 }

@@ -136,6 +136,12 @@ path.w {
   fill: #A84A;  
 }
 
+
+path.r {
+  stroke: none; 
+  fill: #822C;  
+}
+
 .slot {
   position: absolute;
   right: 10px;

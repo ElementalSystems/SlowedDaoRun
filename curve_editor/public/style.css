@@ -232,3 +232,20 @@ path.E  {
   fill: url(#temple);
   stroke: none;  
 }
+
+path.g  {
+  fill: #0505;
+  stroke: none;  
+}
+
+path.gx {
+  fill: #0A08;
+  stroke: none;  
+}
+
+
+
+path.r {
+  stroke: none; 
+  fill: #822C;  
+}
