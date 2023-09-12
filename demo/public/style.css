@@ -91,7 +91,7 @@ path.s {
 path.b {
   stroke: #0608;
   stroke-width: 1;
-  fill: #0A0A;  
+  fill: #060F;  
 }
 
 path.t {
@@ -281,7 +281,11 @@ svg.card.act {
 
 #menu #tit,#menu #com {
   font-size: 3.5rem;
-  fill: #000F;
+  fill: #555F;
+}
+
+#titp {
+  fill:#0000;
 }
 
 #menu #sub {
@@ -289,4 +293,5 @@ svg.card.act {
   fill: #000A;  
   stroke: #0006;
   stroke-width: 1;
+  font-variant:normal;
 }

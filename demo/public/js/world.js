@@ -40,9 +40,6 @@ bits={
   z: {y:1, b:0, s:rd},
   Z: {y:1, b:0, s:sl_down},
 
-  
-
-
 };
 
 
@@ -50,20 +47,20 @@ bits={
 //y0 y diff underfoot
 //y1 y diff next point
 acts=[ //actions and possible outcomes
-   {a:'hop',      y0:0,          y:-1, spd:50, stl:60, s:1, fa: ['run','run2','hop','drop','climb','groll2','vaultdown','vaultr','rolldown'] },   
-   {a: 'jump',    y0:0,    y1:5 ,  y:-1, spd: 70, stl:75, s: 1, fa: ['run','run2','groll2','vaultdown','vaultr']},
-   {a: 'vjump',    y0:0,    y1:5 , y:-1, spd: 70, stl:100, s: 1, fa: ['vaultup','vaulth']},
+   {a:'hop',      y0:0,          y:-1, spd:50, stl:60, s:1, fa: ['run','run2','hop','drop','climb','groll2','vaultdown','vaultr','rolldown'] ,mm:-20  },   
+   {a: 'jump',    y0:0,    y1:5 ,  y:-1, spd: 70, stl:75, s: 1, fa: ['run','run2','groll2','vaultdown','vaultr'], mm:-80},
+   {a: 'vjump',    y0:0,    y1:5 , y:-1, spd: 70, stl:100, s: 1, fa: ['vaultup','vaulth'], mm:-90},
    
-   {a: 'vaultup',  y0:0, y1:-1, y:-1, spd:90, stl:80, s:2 ,fa:['run','run2','hop','drop','climb','vaultdown','vaultr','rolldown','groll2']},
-   {a: 'vaulth',  y0:0, y1:0, y:0, spd:100, stl:100, s:2,fa:['vaultup','vaulth'] },
-   {a: 'toe',          y1: 6,    y:1, spd:70, stl: 100, s:2, fa:['fly2','hop','rollfly2','toe','fall'] },   
-   {a: 'tfly',       y1:5 , y:0, spd: 90, stl:100, s: 2, fa: ['jump','vjump']},
+   {a: 'vaultup',  y0:0, y1:-1, y:-1, spd:90, stl:80, s:2 ,fa:['run','run2','hop','drop','climb','vaultdown','vaultr','rolldown','groll2'],mm:-20  },
+   {a: 'vaulth',  y0:0, y1:0, y:0, spd:100, stl:100, s:2,fa:['vaultup','vaulth'] ,mm:80  },
+   {a: 'toe',          y1: 6,    y:1, spd:70, stl: 100, s:2, fa:['fly2','hop','rollfly2','toe','fall'],mm:20   },   
+   {a: 'tfly',       y1:5 , y:0, spd: 90, stl:100, s: 2, fa: ['jump','vjump'], mm:50  },
 
    
-   {a: 'groll',  y0:0, y1:0, y:0, spd:90, stl:70, s:3, fa:['run','run2','hop','drop','climb','groll2','rolldown','vaultdown'] },
-   {a: 'rolldown',y0:0,   y1:6,    y:1,  spd:100, stl:90, s:3, fa:['run','run2','hop','drop','rolldown'] },
-   {a: 'rollfly',       y1:5,    y:0, spd: 90, stl:100, s: 3, fa: ['jump','vjump']},   
-   {a:'droproll',    y0:6,   y1: 1,    y:1, spd:90, stl: 80, s:3, fa:['fly2','rollfly2','fall','hop','toe','groll2']},
+   {a: 'groll',  y0:0, y1:0, y:0, spd:90, stl:70, s:3, fa:['run','run2','hop','drop','climb','groll2','rolldown','vaultdown'],mm:40   },
+   {a: 'rolldown',y0:0,   y1:6,    y:1,  spd:100, stl:90, s:3, fa:['run','run2','hop','drop','rolldown'] ,mm:80  },
+   {a: 'rollfly',       y1:5,    y:0, spd: 90, stl:100, s: 3, fa: ['jump','vjump'],mm:-40  },   
+   {a:'droproll',    y0:6,   y1: 1,    y:1, spd:90, stl: 80, s:3, fa:['fly2','rollfly2','fall','hop','toe','groll2'],mm:50  },
 
 
    //default actions
@@ -74,21 +71,21 @@ acts=[ //actions and possible outcomes
    {a:'climb',      y0:0, y1:-1,   y:-1,spd:30, stl: 25, s:0 },   
    {a:'run',      y0:0, y1:0,    y:0, spd:80, stl:40, s:0 },      
    {a:'run2',      y0:0, y1:0,    y:0, spd:80, stl:35, s:0, fa:['run'] },      
-   {a:'crashclimb',  y0:6,   y1:0,    spd:10, stl:5, y:0, s:0 },   
+   {a:'crashclimb',  y0:6,   y1:0,    spd:10, stl:5, y:0, s:0, mm: 100 },   
 
    
-   {a: 'fly',        y1:5,    y:0, spd: 90, stl:80, s: 0, fa: ['jump','vjump']},
-   {a: 'fly2',       y1:5,    y:0, spd: 70, stl:80, s: 0, fa: ['fly','tfly']},
-   {a: 'rollfly2',    y1:5,    y:0, spd: 70, stl:100, s: 0, fa: ['rollfly']},   
+   {a: 'fly',        y1:5,    y:0, spd: 90, stl:80, s: 0, fa: ['jump','vjump'],mm:-20  },
+   {a: 'fly2',       y1:5,    y:0, spd: 70, stl:80, s: 0, fa: ['fly','tfly'],mm:-30  },
+   {a: 'rollfly2',    y1:5,    y:0, spd: 70, stl:100, s: 0, fa: ['rollfly'] ,mm:-60  },   
    {a: 'flycatch',    y1:-1,    y:-1, spd: 60, stl:50, s: 0, fa: ['fly','tfly']},   
    {a: 'rollflycatch',    y1:-1,    y:-1, spd: 60, stl:50, s: 0, fa: ['rollfly']},   
 
    {a: 'vaultdown',  y0:0, y1:1, y:1, spd:100, stl:80, s:0, fa:['vaultup','vaulth'] },
    {a: 'vaultr',  y0:0, y1:0, y:0, spd:70, stl:50, s:0, fa:['vaultup','vaulth'] },
-   {a: 'vclimb',  y0:0, y1:-1, y:-1, spd:10, stl:10, s:0, fa:['vaultup','vaulth'] },
+   {a: 'vclimb',  y0:0, y1:-1, y:-1, spd:10, stl:10, s:0, fa:['vaultup','vaulth'] ,mm:-80  },
 
    {a: 'groll2',  y0:0, y1:5, y:0, spd:80, stl:90, s:0, fa:['groll','droproll'] },
-   {a: 'grollcrash',  y0:0, y1:-1, y:-1, spd:10, stl:10, s:0, fa:['groll','droproll'] },      
+   {a: 'grollcrash',  y0:0, y1:-1, y:-1, spd:10, stl:10, s:0, fa:['groll','droproll'], mm: 100 },      
 ];
 
 function startWorld(wld_s)
@@ -143,6 +140,7 @@ function startWorld(wld_s)
   let t_stl=0;
   let dstl=0;
   let lastA=null;
+  let m_mod=0;
 
   let test_y=(cond,actual)=>{
     if (cond==null) return true;
@@ -180,6 +178,8 @@ function startWorld(wld_s)
                 
         //do the animation
         rd.addA(na.a);
+
+        m_mod=na.mm||0;
 
         if (rdxp>=wld_l) { //game ended
           ctrl.set([0]);
@@ -229,6 +229,13 @@ function startWorld(wld_s)
   //rd.addA('fly');
   //rd.addA('flycatch');
 
+  //run the music
+  let pn=()=>{
+    ae.note(-rd.y()/35,m_mod);
+    if (vpm<2) setTimeout(pn,1000-spd*6);
+  }
+  pn();
+
 
   //rd.addA('crashclimb');
   //make a frame loop for world
@@ -250,6 +257,8 @@ function startWorld(wld_s)
       $('#spd').text(`Speed\n ${Math.floor(spd)}%`);
       stl+=dstl*t*tf;
       $('#stl').text(`Style\n ${Math.floor(stl)}%`);
+      //keep playing music
+      
     } else if (vpm==2) {
       $('#spd').text('');      
       $('#stl').text('');
